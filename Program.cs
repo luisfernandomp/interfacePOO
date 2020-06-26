@@ -20,7 +20,7 @@ namespace interfaces
             cart.Adicionar(p4);
             cart.Adicionar(p5);
 
-            cart.Deletar(p3);
+            cart.Remover(p3);
 
             Produto pAlterado = new Produto(4, "Cyberpunk 2077", 200f);
             cart.Alterar(2, pAlterado);
