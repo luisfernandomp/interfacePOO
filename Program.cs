@@ -20,14 +20,17 @@ namespace interfaces
             cart.Adicionar(p4);
             cart.Adicionar(p5);
 
-            cart.Remover(p3);
+            cart.Remover(p5);
+            cart.Remover(p4);
 
-            Produto pAlterado = new Produto(4, "Cyberpunk 2077", 200f);
+            Produto pAlterado = new Produto(4, "Point Blank", 20.99f);
             cart.Alterar(2, pAlterado);
 
             cart.Ler();
 
-            cart.MostrarTotal();
+            Console.ForegroundColor = ConsoleColor.Blue;
+            cart.Total();
+            Console.ResetColor();
         }
     }
 }

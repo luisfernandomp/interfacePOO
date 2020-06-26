@@ -21,7 +21,7 @@ namespace interfaces
         public void Ler (){
             foreach (Produto item in carrinho)
             {
-                Console.WriteLine($"\nNome: {item.Nome} - R${item.Preco}");
+                Console.WriteLine($"Nome: {item.Nome} - R${item.Preco}");
             }
         }
 
@@ -30,11 +30,11 @@ namespace interfaces
             carrinho.Find(z => z.Codigo == _codigo).Preco = _produtoAlterado.Preco;
 
         }
-        public void MostrarTotal (){
+        public void Total (){
             foreach(Produto item in carrinho){
                 ValorTotal += item.Preco;
             }
-            System.Console.WriteLine("Valor total: R$"+ValorTotal);
+            System.Console.WriteLine("Valor total: R$"+ValorTotal.ToString("C"));
         }
     }
 }
