@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace interfaces
 {
-    public class Carrinho
+    public class Carrinho : ICarrinho
     {
         public float ValorTotal { get; set; }
         public int MyProperty { get; set; }
@@ -14,7 +14,7 @@ namespace interfaces
             carrinho.Add(_prod);
         }
 
-        public void Deletar (Produto _prod){
+        public void Remover (Produto _prod){
             carrinho.Remove(_prod);
         }
 
